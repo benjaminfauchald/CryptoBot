@@ -1,0 +1,37 @@
+
+<br>
+<ul>
+<h1 class="header">Latest trades OMG vs BTC</h1>
+
+<table class="table" >
+  <th>Tradeid</th>
+  <th>Rate</th>
+  <th>Amount</th>
+  <th>Date</th>
+
+  <th>orderid</th>
+  <th>Rate</th>
+  <th>Amount</th>
+  <th>Date</th>
+
+
+
+
+  <th></th>
+  <% @data["trades"].each do |trade| %>
+  <tr>
+    <td> <%=trade["trade_id"].to_s %></td>
+    <td> <%=trade["rate"].to_s %></td>
+    <td> <%=trade["amount"].to_s %></td>
+    <td> <%=trade["trade_date"].to_s %></td>
+
+    <td> <%=trade["order_id"].to_s %></td>
+    <td> <%=trade["trade_type"].to_s %></td>
+    <td> <%=trade["reference_id"].to_s %></td>
+    <td> <%=trade["seconds"].to_s %></td>
+
+
+
+  </tr>
+  <% end %>
+</table>
